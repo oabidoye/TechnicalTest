@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Ulaw.ApplicationProcessor.Models;
 
 namespace Ulaw.ApplicationProcessor
 {
-    internal interface IApplication
+    public interface IApplication
     {
+        string Process(ApplicationRequestModel requestModel);
     }
 }

@@ -3,7 +3,7 @@ using ULaw.ApplicationProcessor.Enums;
 
 namespace Ulaw.ApplicationProcessor.Models
 {
-    internal class ApplicationRequestModel
+    public class ApplicationRequestModel
     {
         public Guid ApplicationId { get; private set; }
         public string Faculty { get; private set; }
