@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
-using ULaw.ApplicationProcessor.Enums;  
+using Ulaw.ApplicationProcessor.Extensions;
+using ULaw.ApplicationProcessor.Enums;
 
 namespace ULaw.ApplicationProcessor
 {

@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace ULaw.ApplicationProcessor
+namespace Ulaw.ApplicationProcessor.Extensions
 {
-    static class ExtensionMethods
+    static class EnumExtensions
     {
         public static string ToDescription(this Enum en)
         {
@@ -15,16 +13,10 @@ namespace ULaw.ApplicationProcessor
             MemberInfo[] memInfo = type.GetMember(en.ToString());
 
             if (memInfo != null && memInfo.Length > 0)
-
             {
-
-                object[] attrs = memInfo[0].GetCustomAttributes(
-                                              typeof(DescriptionAttribute),
-
-                                              false);
+                object[] attrs = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
 
                 if (attrs != null && attrs.Length > 0)
-
                     return ((DescriptionAttribute)attrs[0]).Description;
 
             }
